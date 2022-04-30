@@ -19,6 +19,21 @@ Route::get('/', function () {
 // passare i data dei dc
 
 
+
+Route::get('/comics/{id}', function ($id){
+    $comics = collect(config('myconfig.comics'));
+
+    $selectedComic = $comics->firstWhere('id', $id);
+    // $selectedComic = array_values($selectedComic->all())[0];
+
+    return view('guest.template.comic', [
+        'title'=> $selectedComic['title'] . 'lol' . $id,
+        'comic'=> $selectedComic
+    ]);
+})->name('comic');
+
+
+
 Route::get('/characters', function () {
-    return view('guest.characters');
+    return view('guest.template.characters');
 })->name('characters');
