@@ -20,20 +20,31 @@ Route::get('/', function () {
 
 
 
-Route::get('/comics/{id}', function ($id){
-    $comics = collect(config('myconfig.comics'));
+Route::get('/characters', function () {
+    return view('guest.characters');
+})->name('characters');
 
-    $selectedComic = $comics->firstWhere('id', $id);
+
+
+
+
+Route::get('/comics', function () {
+    return view('guest.comics');
+})->name('comics');
+
+
+
+Route::get('/comics/{id}', function ($id){
+    $comic = collect(config('myconfig.comics'));
+    $selectedComic = $comic->firstWhere('id', $id);
+
+    // controllo su numero id, se non esiste 404
+    if (! $selectedComic) abort(404);
+
     // $selectedComic = array_values($selectedComic->all())[0];
 
-    return view('guest.template.comic', [
-        'title'=> $selectedComic['title'] . 'lol' . $id,
+    return view('guest.comic', [
+        'title'=> $selectedComic['series'],
         'comic'=> $selectedComic
     ]);
 })->name('comic');
-
-
-
-Route::get('/characters', function () {
-    return view('guest.template.characters');
-})->name('characters');

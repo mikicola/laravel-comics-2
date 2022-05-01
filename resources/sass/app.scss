@@ -3,8 +3,8 @@
 @import 'partials/reset';
 
 .active {
-    background-color: yellow;
-    border-bottom: solid 2px blue;
+    border-bottom: 0.4rem $blue-dc-color solid;
+    color: $blue-dc-color;
 }
 
 
@@ -48,21 +48,20 @@ header{
       }
   }
 }
-
+#jumbotron {
+    height: 300px;
+    overflow: hidden;
+    img {
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 100%;
+    }
+}
 // ___main___________________
 main{
-    color: #fff;
-    text-transform: uppercase;
-    #jumbotron {
-      height: 300px;
-      overflow: hidden;
-      img {
-        background-repeat: no-repeat;
-        background-size: auto;
-        width: 100%;
-      }
-    }
     #comics{
+        color: #fff;
+        text-transform: uppercase;
       // background-color: $dark-bg-color;
         h2{
           background: $blue-dc-color;

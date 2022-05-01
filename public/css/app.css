@@ -22,8 +22,8 @@ body {
 }
 
 .active {
-  background-color: yellow;
-  border-bottom: solid 2px blue;
+  border-bottom: 0.4rem rgb(12, 124, 236) solid;
+  color: rgb(12, 124, 236);
 }
 
 header {
@@ -63,18 +63,19 @@ header ul li a:hover {
   color: rgb(12, 124, 236);
 }
 
-main {
-  color: #fff;
-  text-transform: uppercase;
-}
-main #jumbotron {
+#jumbotron {
   height: 300px;
   overflow: hidden;
 }
-main #jumbotron img {
+#jumbotron img {
   background-repeat: no-repeat;
   background-size: auto;
   width: 100%;
+}
+
+main #comics {
+  color: #fff;
+  text-transform: uppercase;
 }
 main #comics h2 {
   background: rgb(12, 124, 236);

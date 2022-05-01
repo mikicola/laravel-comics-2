@@ -10,9 +10,6 @@
 
 @section('content')
 <main>
-    <section id="jumbotron">
-      <img src="./images/jumbotron.jpg" alt="DC Comics banner personaggi">
-    </section>
     <section id="comics">
       <h2>current series</h2>
         <div class="container flex">
@@ -39,8 +36,5 @@
             @endforeach
         </div>
     </div>
-
-
   </main>
-
 @endsection

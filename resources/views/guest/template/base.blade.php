@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+
     @include('guest.partials.header')
     @yield('content')
     @include('guest.partials.footer')
