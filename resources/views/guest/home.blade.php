@@ -16,10 +16,13 @@
 
             @foreach (config('myconfig.comics') as $item)
                 <div class="item">
-                    <div class="img-item-content">
-                        <img src="{{ $item['thumb'] }}" alt="{{ $item['series'] }}">
-                    </div>
-                    <span>{{ $item['series'] }}</span>
+                    {{-- in a href collego i comic da home a pagina specifica  --}}
+                    <a href="{{ route('comic', ['id' => $item['id']]) }}">
+                        <div class="img-item-content">
+                            <img src="{{ $item['thumb'] }}" alt="{{ $item['series'] }}">
+                        </div>
+                        <span>{{ $item['series'] }}</span>
+                    </a>
                 </div>
             @endforeach
             <!-- THUMB è link immagine -->

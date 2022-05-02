@@ -76,11 +76,15 @@ header ul li a:hover {
 main #comics {
   color: #fff;
   text-transform: uppercase;
+  position: relative;
+  padding-top: 4rem;
 }
 main #comics h2 {
   background: rgb(12, 124, 236);
   padding: 0.7rem 0.5rem;
   display: inline-block;
+  position: absolute;
+  top: -1.5rem;
 }
 main #comics .container {
   flex-wrap: wrap;
@@ -89,10 +93,13 @@ main #comics .container .item {
   padding: 1rem 0.5rem;
   width: 16.6666666667%;
 }
+main #comics .container .item a {
+  color: #fff;
+  text-decoration: none;
+}
 main #comics .container .item .img-item-content {
   max-width: 100%;
   position: relative;
-  background-color: aqua;
   margin-bottom: 1rem;
   overflow: hidden;
 }

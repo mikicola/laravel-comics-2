@@ -25,9 +25,6 @@ Route::get('/characters', function () {
 })->name('characters');
 
 
-
-
-
 Route::get('/comics', function () {
     return view('guest.comics');
 })->name('comics');
