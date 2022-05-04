@@ -16,7 +16,7 @@ header{
   .header {
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    height: 100px;
 
   }
   img {
@@ -59,8 +59,8 @@ header{
 }
 // ___main___________________
 main{
+    color: #fff;
     #comics{
-        color: #fff;
         text-transform: uppercase;
         position: relative;
         padding-top: 4rem;

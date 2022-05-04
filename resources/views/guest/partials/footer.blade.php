@@ -1,6 +1,7 @@
 <footer>
     <div class="main-footer">
-        <img src="./images/footer-bg.jpg" alt="DC sfondo footer">
+        {{-- <img src="{{ asset('./images/jumbotron.jpg')}}" alt="DC Comics banner personaggi"> --}}
+        <img src="{{asset ('./images/footer-bg.jpg')}}" alt="DC sfondo footer">
         <div class="container flex">
             <div class="left flex">
                 <div class="dc-shop column">
@@ -37,7 +38,8 @@
             </div>
 
             <div class="right">
-                <img src="./images/dc-logo-bg.png" alt="">
+                {{-- <img src="{{ asset('./images/jumbotron.jpg')}}" alt="DC Comics banner personaggi"> --}}
+                <img src="{{ asset('./images/dc-logo-bg.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -52,7 +54,9 @@
                 @foreach (config('myconfig.footer.follow') as $item)
                     <li>
                         <a href="#">
-                            <img src="./images/{{ $item['img'] }}" alt="icona social">
+                            <img src="images/{{ $item['img'] }}" alt="icona social">
+
+                            {{-- <img src="{{ asset('images/'{{ $item['img'] }}) }}" alt="icona social"> --}}
                         </a>
                     </li>
                 @endforeach

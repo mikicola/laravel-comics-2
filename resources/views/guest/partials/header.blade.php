@@ -5,7 +5,7 @@
 
     <div class="header container">
         <a href="{{ route('home') }}">
-            <img src="./images/dc-logo.png" alt="logo DC">
+            <img src="{{ asset('./images/dc-logo.png')}}" alt="logo DC">
         </a>
         <nav>
             <ul>
@@ -24,5 +24,5 @@
     </div>
 </header>
 <section id="jumbotron">
-    <img src="./images/jumbotron.jpg" alt="DC Comics banner personaggi">
+    <img src="{{ asset('./images/jumbotron.jpg')}}" alt="DC Comics banner personaggi">
 </section>

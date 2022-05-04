@@ -2,7 +2,6 @@
 
 @section('title', 'DC - ' . $title)
 
-
 @section('content')
     <main>
         <img src="{{ $comic['thumb'] }}">
@@ -36,3 +35,7 @@
 
     </main>
 @endsection
+
+<style>
+    /* @import 'public/css/app.css'; */
+</style>
